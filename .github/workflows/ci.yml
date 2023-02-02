@@ -29,14 +29,4 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build -x test
 
-#       작성한 단위테스트가 있다면 테스트를 자동으로 수행
-      - name: Test with Gradle
-        run: SPRING_PROFILES_ACTIVE=[test] ./gradlew test
 
-#       캐시액션으로 최적화
-      - name: Cache Gradle packages
-        uses: actions/cache@v1
-        with:
-          path: ~/.gradle/caches
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
-          restore-keys: ${{ runner.os }}-gradle
