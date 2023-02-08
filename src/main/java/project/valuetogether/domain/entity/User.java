@@ -3,8 +3,10 @@ package project.valuetogether.domain.entity;
 import com.sun.istack.NotNull;
 import lombok.AccessLevel;
 import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import project.valuetogether.global.enums.Gender;
+import project.valuetogether.global.enums.RoleType;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,11 +16,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
-@Data
+@Getter
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "tbl_user")
@@ -56,9 +55,7 @@ public class User {
 
     @NotNull
     @Enumerated(EnumType.STRING)
-    private Role role = Role.ROLE_USER;
-
-
+    private RoleType role = RoleType.ROLE_USER;
 
     @Builder
     public User(String email, String password, String name, String phoneNumber, String address, Gender gender, String nickname, String birthYear) {
@@ -70,17 +67,5 @@ public class User {
         this.gender = gender;
         this.nickname = nickname;
         this.birthYear = birthYear;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public Role getRole() {
-        return role;
     }
 }
