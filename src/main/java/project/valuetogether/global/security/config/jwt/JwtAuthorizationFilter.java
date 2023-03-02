@@ -5,14 +5,14 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
-import project.valuetogether.domain.entity.User;
+import project.valuetogether.domain.user.entity.User;
+import project.valuetogether.domain.user.repository.UserRepository;
 import project.valuetogether.global.exception.ExpiredJwtException;
 import project.valuetogether.global.exception.InvalidJwtException;
 import project.valuetogether.global.security.config.auth.PrincipalDetails;
 import project.valuetogether.global.security.entity.RefreshToken;
 import project.valuetogether.global.security.error.ErrorCode;
 import project.valuetogether.global.security.repository.RefreshTokenRepository;
-import project.valuetogether.global.security.repository.UserRepository;
 import project.valuetogether.global.security.service.UpdateRefreshTokenService;
 
 import javax.servlet.FilterChain;

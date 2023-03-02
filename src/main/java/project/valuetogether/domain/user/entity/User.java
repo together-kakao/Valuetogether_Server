@@ -1,4 +1,4 @@
-package project.valuetogether.domain.entity;
+package project.valuetogether.domain.user.entity;
 
 import com.sun.istack.NotNull;
 import lombok.AccessLevel;

@@ -5,8 +5,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import project.valuetogether.domain.entity.User;
-import project.valuetogether.global.security.repository.UserRepository;
+import project.valuetogether.domain.user.entity.User;
+import project.valuetogether.domain.user.repository.UserRepository;
 
 @RequiredArgsConstructor
 @Service

@@ -9,13 +9,13 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import project.valuetogether.domain.user.repository.UserRepository;
 import project.valuetogether.global.security.config.jwt.CustomAuthenticationEntryPoint;
 import project.valuetogether.global.security.config.jwt.JwtAuthenticationFilter;
 import project.valuetogether.global.security.config.jwt.JwtAuthorizationFilter;
 import project.valuetogether.global.security.config.jwt.JwtTokenProvider;
 import project.valuetogether.global.security.config.jwt.RefreshCheckFilter;
 import project.valuetogether.global.security.repository.RefreshTokenRepository;
-import project.valuetogether.global.security.repository.UserRepository;
 import project.valuetogether.global.security.service.UpdateRefreshTokenService;
 
 @RequiredArgsConstructor
